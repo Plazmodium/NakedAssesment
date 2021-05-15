@@ -15,10 +15,10 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
-			<Route exact path="/" component={AppComponent} />
+			<Route path="/" component={HomeComponent} />
+			{/* <Route exact path="/" component={AppComponent} /> */}
 			<Route path="/signup" component={SignupComponent} />
 			<Route path="/login" component={LoginComponent} />
-			<Route path="/home" component={HomeComponent} />
 			<Route path="/basket" component={BasketComponent} />
 		</Router>
 	</React.StrictMode>,

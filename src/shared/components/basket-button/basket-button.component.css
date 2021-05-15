@@ -1,0 +1,36 @@
+.container {
+	border: 1px solid #231f20;
+	background: #231f20;
+	border-radius: 20px;
+	padding: 7px;
+	width: 130px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+	box-shadow: grey 1px 5px 10px -5px;
+}
+
+.basket-icon {
+	width: 20px;
+}
+
+.basket-text {
+	color: white;
+}
+
+.basket-text:hover {
+	color: gray;
+}
+
+.basket-count {
+	border: 1px solid #46d281;
+	background: #46d281;
+	border-radius: 20px;
+	padding: 0px;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	color: white;
+}
