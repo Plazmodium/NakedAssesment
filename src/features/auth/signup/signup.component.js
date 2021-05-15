@@ -6,6 +6,7 @@ import NakedIcon from '../../../assets/naked-icon.png';
 export default function SignupComponent() {
 	const history = useHistory();
 	const toBasketClick = () => history.push('/basket');
+	const toLoginClick = () => history.push('/login');
 
 	return (
 		<div>
@@ -34,7 +35,7 @@ export default function SignupComponent() {
 					<button class="signup-button" onClick={toBasketClick}>
 						Create account
 					</button>
-					<button class="login-button" onClick={toBasketClick}>
+					<button class="login-button" onClick={toLoginClick}>
 						Already have an account?
 					</button>
 				</div>
