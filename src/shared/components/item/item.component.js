@@ -15,12 +15,12 @@ export default function ItemComponent() {
 		return (
 			<div class="product-component-container">
 				<div class="products">
-					<img src={ItemIcon} alt="" width="141px" class="product-icon" />
+					<div class="delete">X</div>
+					<img src={ItemIcon} alt="" width="50px" class="product-icon" />
 					<h5 class="item-name">Land Rover</h5>
 					<h6 class="item-description">Comprehensive</h6>
 					<h7 class="price-description">R650</h7>
 				</div>
-				<div class="delete">X</div>
 			</div>
 		);
 	}

@@ -25,9 +25,9 @@
 }
 
 .delete {
-	position: fixed;
+	display: flex;
 	justify-content: flex-end;
-	bottom: 285px;
+	position: fixed;
 	left: 460px;
 	cursor: pointer;
 }
