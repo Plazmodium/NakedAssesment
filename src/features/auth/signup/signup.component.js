@@ -30,8 +30,12 @@ export default function SignupComponent() {
 						type="password"
 						name="password"
 					/>
+
 					<button class="signup-button" onClick={toBasketClick}>
-						Login
+						Create account
+					</button>
+					<button class="login-button" onClick={toBasketClick}>
+						Already have an account?
 					</button>
 				</div>
 			</form>
