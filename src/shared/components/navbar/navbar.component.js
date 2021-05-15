@@ -4,9 +4,9 @@ import NakedLogo from '../../../assets/NakedText.png';
 
 export default function NavBarComponent() {
 	return (
-		<div class="header" id="myHeader">
-			<div class="header-button-container">
-				<img src={NakedLogo} class="naked-image" alt="" />
+		<div className="header" id="myHeader">
+			<div className="header-button-container">
+				<img src={NakedLogo} className="naked-image" alt="" />
 				<BasketButton></BasketButton>
 			</div>
 		</div>

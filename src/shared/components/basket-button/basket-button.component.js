@@ -3,10 +3,10 @@ import ShoppingBasketIcon from '../../../assets/shopping-basket.png';
 
 export default function BasketButtonComponent() {
 	return (
-		<div class="container">
-			<img src={ShoppingBasketIcon} alt="" class="basket-icon" />
-			<div class="basket-text">Basket</div>
-			<div class="basket-count">1</div>
+		<div className="container">
+			<img src={ShoppingBasketIcon} alt="" className="basket-icon" />
+			<div className="basket-text">Basket</div>
+			<div className="basket-count">1</div>
 		</div>
 	);
 }

@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
-			<Route path="/" component={HomeComponent} />
+			<Route exact path="/" component={HomeComponent} />
 			{/* <Route exact path="/" component={AppComponent} /> */}
 			<Route path="/signup" component={SignupComponent} />
 			<Route path="/login" component={LoginComponent} />
