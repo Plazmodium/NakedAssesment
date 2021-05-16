@@ -1,5 +1,5 @@
 import './basket.component.css';
-
+import moment from 'moment';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import CalendarIcon from '../../assets/calendar-icon.png';
@@ -9,8 +9,8 @@ import ItemComponent from '../../shared/components/item/item.component';
 import CalendarModal from '../../shared/components/calendar-modal/calendar.component';
 
 export default function BasketComponent() {
-	let [showCalendar, setCalendar] = useState(true);
-	let [coverStartDate, setCoverStartDate] = useState('today');
+	let [showCalendar, setCalendar] = useState(false);
+	let [coverStartDate, setCoverStartDate] = useState('Today');
 
 	function showCal() {
 		if (showCalendar) {
@@ -19,6 +19,7 @@ export default function BasketComponent() {
 					<CalendarModal
 						show={showCalendar}
 						handleClose={activateCalendar}
+						dateSelected={dateSelectedCalendar}
 					></CalendarModal>
 				</div>
 			);
@@ -49,6 +50,58 @@ export default function BasketComponent() {
 
 	const activateCalendar = () => {
 		showCalendar = showCalendar ? setCalendar(false) : setCalendar(true);
+	};
+	const dateSelectedCalendar = (date) => {
+		let inADay = 60 * 60 * 24 * 1000;
+
+		let formattedSelectedDate =
+			date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+
+		const todayDate = new Date();
+		let formattedTodayDate =
+			todayDate.getFullYear() +
+			'-' +
+			(todayDate.getMonth() + 1) +
+			'-' +
+			todayDate.getDate();
+
+		const selected = moment(date).format('YYYY-MM-DD');
+		const selectedUnix = moment(selected).unix();
+
+		const today = moment().format('YYYY-MM-DD');
+		const todayUnix = moment(today).unix();
+
+		const toSelectedNewDate = Date.parse(formattedSelectedDate);
+		const toTodayNewDate = Date.parse(formattedTodayDate);
+
+		const tomorrow = moment().add(1, 'days').calendar();
+		// const tomorrowFormatted = moment(tomorrow).format('dddd');
+
+		let inSevenDays = moment().add(7, 'days').calendar();
+		let inSevenDaysFormatted = moment(inSevenDays).format('YYYY-MM-DD');
+		let inSevenDaysUnix = moment(inSevenDaysFormatted).unix();
+
+		console.log('selectedUnix', selectedUnix);
+		console.log('yy', inSevenDaysUnix);
+
+		switch (true) {
+			case selectedUnix === todayUnix:
+				console.log('Today');
+				setCoverStartDate('Today');
+				break;
+			case toSelectedNewDate === toTodayNewDate + inADay:
+				console.log('Tomorrow');
+				setCoverStartDate('Tomorrow');
+				break;
+			case selectedUnix <= inSevenDaysUnix:
+				console.log('rest', moment(date).format('dddd'));
+				setCoverStartDate(moment(date).format('dddd'));
+				break;
+			default:
+				console.log('deafult', moment(date).format('DD/MM/YY'));
+				setCoverStartDate(moment(date).format('DD/MM/YY'));
+				break;
+		}
 	};
 
 	return (

@@ -1,22 +1,30 @@
-import './calendar.component.js';
+import './calendar.component.css';
 import Calendar from 'react-calendar';
 import React, { useState } from 'react';
 
 export const CalendarModal = (props) => {
-	const { handleClose, show, children } = props;
-
-	let showHideClassName = show ? 'modal display-block' : 'modal display-none';
-	console.log('showHideClassName', showHideClassName);
+	let { handleClose, dateSelected } = props;
 	const [dateValue, setDateValue] = useState(new Date());
-
+	const date = new Date();
 	return (
-		<div class={showHideClassName}>
-			<section class="modal-main">
-				<Calendar onChange={setDateValue} value={dateValue} />
-				<button type="button" onClick={handleClose}>
-					Close
-				</button>
-			</section>
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-title">
+					<h3>Please choose a date</h3>
+				</div>
+				<Calendar
+					onChange={handleClose}
+					value={dateValue}
+					onClickDay={dateSelected}
+					minDate={new Date()}
+					format="dd-MMMM-d-yyyy"
+				/>
+				<div class="close-button">
+					<button type="button" onClick={handleClose}>
+						Close
+					</button>
+				</div>
+			</div>
 		</div>
 	);
 };
