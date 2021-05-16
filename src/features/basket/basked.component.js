@@ -1,7 +1,6 @@
 import './basket.component.css';
 import { DateParse } from '../../shared/services/helpers.service';
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import CalendarIcon from '../../assets/calendar-icon.png';
 import PencilIcon from '../../assets/pencil.svg';
 import NavBar from '../../shared/components/navbar/navbar.component';

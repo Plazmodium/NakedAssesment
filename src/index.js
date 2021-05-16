@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render } from 'react-dom';
+
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './index.css';
-import AppComponent from './App';
+
 import SignupComponent from './features/auth/signup/signup.component';
 import LoginComponent from './features/auth/login/login.component';
 import HomeComponent from './features/home/home.component';

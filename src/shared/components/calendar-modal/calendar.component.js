@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 
 export const CalendarModal = (props) => {
 	let { handleClose, dateSelected } = props;
-	const [dateValue, setDateValue] = useState(new Date());
-	const date = new Date();
+	const [dateValue] = useState(new Date());
 	return (
 		<div class="modal">
 			<div class="modal-content">
