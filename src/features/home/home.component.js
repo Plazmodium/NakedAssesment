@@ -12,7 +12,7 @@ export default function HomeComponent() {
 	return (
 		<div>
 			<NavBar></NavBar>
-			<div class="body-text">
+			<div className="body-text">
 				<div className="left-side-text">
 					<h1 className="text1">The new way to insure your stuff</h1>
 					<h5 className="text2">
@@ -31,7 +31,9 @@ export default function HomeComponent() {
 					<img src={NakedImage} alt="" width="100%" />
 				</div>
 			</div>
-			<HomeFooter></HomeFooter>
+			<div>
+				<HomeFooter></HomeFooter>
+			</div>
 		</div>
 	);
 }
