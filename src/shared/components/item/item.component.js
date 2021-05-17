@@ -4,22 +4,22 @@ import ItemIcon from '../../../assets/camera.svg';
 export default function ItemComponent() {
 	function emptyComponent() {
 		return (
-			<div class="empty-component-container">
-				<div class="add-description">Get a price</div>
-				<div class="add-icon">+</div>
+			<div className="empty-component-container">
+				<div className="add-description">Get a price</div>
+				<div className="add-icon">+</div>
 			</div>
 		);
 	}
 
 	function filledProduct() {
 		return (
-			<div class="product-component-container">
-				<div class="products">
-					<div class="delete">X</div>
-					<img src={ItemIcon} alt="" width="50px" class="product-icon" />
-					<h5 class="item-name">Samsung</h5>
-					<h6 class="item-description">Comprehensive</h6>
-					<h7 class="price-description">R650</h7>
+			<div className="product-component-container">
+				<div className="products">
+					<div className="delete">X</div>
+					<img src={ItemIcon} alt="" width="50px" className="product-icon" />
+					<h5 className="item-name">Samsung</h5>
+					<h6 className="item-description">Comprehensive</h6>
+					<h7 className="price-description">R650</h7>
 				</div>
 			</div>
 		);

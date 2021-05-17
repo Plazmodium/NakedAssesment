@@ -1,3 +1,88 @@
+@media screen and (max-width: 768px) {
+	.basket-container {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 8%;
+		background-color: #46d281;
+		z-index: 1px;
+		border-top: 0.5px solid lightgray;
+	}
+
+	.data-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		/* background-color: red; */
+		height: 90vh;
+	}
+
+	.basket-title {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 30px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 0.47;
+		letter-spacing: 1.4px;
+		color: white;
+	}
+
+	.item-collection-container {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 60vh;
+	}
+
+	.calendar-pill-container {
+		width: 225px;
+		padding: 10px 25px 10px 25px;
+		border-radius: 45px;
+		background-color: #1da869;
+	}
+
+	.pill-container {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+	}
+
+	.pill-left {
+		display: flex;
+		width: 80%;
+		justify-content: flex-start;
+	}
+
+	.cover-date-text {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		color: white;
+		margin: 0px 0px 0px 10px;
+	}
+	.date-text {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		color: white;
+		font-weight: bold;
+	}
+
+	.pill-right {
+		display: flex;
+		justify-content: flex-end;
+		padding: 2px;
+		border-radius: 60px;
+		cursor: pointer;
+		background-color: white;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	.basket-container {
 		position: fixed;

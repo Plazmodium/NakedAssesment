@@ -11,23 +11,28 @@ export default function LoginComponent() {
 		<div>
 			<NavBar></NavBar>
 
-			<form class="form-container">
-				<div class="naked-icon-container">
-					<img class="n-icon" src={NakedIcon} alt="" />
+			<form className="form-container">
+				<div className="naked-icon-container">
+					<img className="n-icon" src={NakedIcon} alt="" />
 				</div>
-				<div class="input-container">
-					<input class="input" placeholder="Email" type="email" name="email" />
+				<div className="input-container">
 					<input
-						class="input"
+						className="input"
+						placeholder="Email"
+						type="email"
+						name="email"
+					/>
+					<input
+						className="input"
 						placeholder="Password"
 						type="password"
 						name="password"
 					/>
 
-					<button class="signup-button" onClick={toBasketClick}>
+					<button className="signup-button" onClick={toBasketClick}>
 						Login
 					</button>
-					<button class="login-button" onClick={toSignupClick}>
+					<button className="login-button" onClick={toSignupClick}>
 						Need an account?
 					</button>
 				</div>

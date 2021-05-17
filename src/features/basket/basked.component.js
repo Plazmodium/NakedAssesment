@@ -24,15 +24,15 @@ export default function BasketComponent() {
 			);
 		} else {
 			return (
-				<div class="calendar-pill-container">
-					<div class="pill-container">
-						<div class="pill-left">
+				<div className="calendar-pill-container">
+					<div className="pill-container">
+						<div className="pill-left">
 							<img src={CalendarIcon} alt="" width="20px" height="auto" />
-							<div class="cover-date-text">
-								Cover starts <span class="date-text">{coverStartDate}</span>{' '}
+							<div className="cover-date-text">
+								Cover starts <span className="date-text">{coverStartDate}</span>{' '}
 							</div>
 						</div>
-						<div class="pill-right">
+						<div className="pill-right">
 							<img
 								onClick={activateCalendar}
 								src={PencilIcon}
@@ -58,11 +58,11 @@ export default function BasketComponent() {
 	return (
 		<div>
 			<NavBar></NavBar>
-			<div class="basket-container">
-				<div class="data-container">
-					<h2 class="basket-title">Your Basket</h2>
+			<div className="basket-container">
+				<div className="data-container">
+					<h2 className="basket-title">Your Basket</h2>
 					{showCal()}
-					<div class="item-collection-container">
+					<div className="item-collection-container">
 						<ItemComponent></ItemComponent>
 					</div>
 				</div>

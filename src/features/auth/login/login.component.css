@@ -1,3 +1,67 @@
+@media screen and (max-width: 768px) {
+	.form-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		/* background-color: red; */
+		height: 85vh;
+	}
+
+	.input-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		background-color: white;
+		border: 1px solid white;
+		border-radius: 20px;
+		padding: 40px;
+		height: 40vh;
+		box-shadow: #dedede 0px 20px 20px 0px;
+	}
+
+	.input {
+		height: 25px;
+		width: 30vh;
+		padding: 10px 0px 10px 10px;
+		border-radius: 5px;
+		border: solid 2px #d3d2d2;
+	}
+
+	.naked-icon-container {
+		position: relative;
+	}
+	.n-icon {
+		position: fixed;
+		top: 7em;
+		left: 131px;
+		width: 17%;
+	}
+
+	.signup-button {
+		color: white;
+		background-image: linear-gradient(to top, #32b877, #46d281);
+		border-radius: 60px;
+		border: 1px solid #46d281;
+		width: 75%;
+		height: 15%;
+		cursor: pointer;
+	}
+	.signup-button:hover {
+		box-shadow: 0px 4px 15px -4px grey;
+	}
+
+	.login-button {
+		color: #46d281;
+		cursor: pointer;
+		background: transparent;
+		border: 0px;
+		padding: 5px;
+		font-size: 12px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	.form-container {
 		display: flex;

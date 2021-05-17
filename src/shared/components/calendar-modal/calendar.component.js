@@ -6,9 +6,9 @@ export const CalendarModal = (props) => {
 	let { handleClose, dateSelected } = props;
 	const [dateValue] = useState(new Date());
 	return (
-		<div class="modal">
-			<div class="modal-content">
-				<div class="modal-title">
+		<div className="modal">
+			<div className="modal-content">
+				<div className="modal-title">
 					<h3>Please choose a date</h3>
 				</div>
 				<Calendar
@@ -18,8 +18,8 @@ export const CalendarModal = (props) => {
 					minDate={new Date()}
 					format="dd-MMMM-d-yyyy"
 				/>
-				<div class="close-button">
-					<button type="button" onClick={handleClose}>
+				<div className="close-container">
+					<button className="close-button" type="button" onClick={handleClose}>
 						Close
 					</button>
 				</div>
